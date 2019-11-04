@@ -61,38 +61,8 @@ module
   └── vending-machines.container.js
 ```
 
-## Boas Práticas
-
-### Regras Básicas
-
-- Apenas **um** componente por arquivo.
-
-  - Contudo, múltiplos componentes são permitidos quando são dependentes um do outro e apenas 1 tem retorno [Statefull ou Stateless ](https://facebook.github.io/react/docs/reusable-components.html#stateless-functions) são permitidos por arquivo. eslint: [`react/no-multi-comp`](https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/no-multi-comp.md#ignorestateless).
-
-  ```jsx
-  function Hello(props) {
-    return <div>Hello {props.name}</div>
-  }
-
-  export default class HelloWorld extends Component {
-    render() {
-      return <Hello name="World" />
-    }
-  }
-  ```
-
 - Sempre use a sintaxe JSX.
 
-* Use arrow functions para variáveis locais.
+## Estrutura
 
-  ```jsx
-  function ItemList(props) {
-    return (
-      <div>
-        {props.items.map((item, index) => (
-          <Item key={item.key} onPress={() => fazerAlgoCom(item.name, index)} />
-        ))}
-      </div>
-    )
-  }
-  ```
+[Estrutura](https://github.com/JozielOliveira/boilerplate-react/blob/master/Arquiteture.md)
