@@ -1,8 +1,9 @@
 import React from 'react';
+import Logo from './assets/Logo.svg'
 
 const App = () => (
   <>
-  Foi!
+    <img src={Logo} />
   </>
 );
 
