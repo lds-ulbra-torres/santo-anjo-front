@@ -37,6 +37,10 @@ preferencialmente o nome em inglês.
 - releases começando com `release/`, seguido com o número da versão (ex: `release/v1.1.34`)
 - correções de versões em produção começando com `hotfix/` (ex: `hotfix/login-error`)
 
+- Material auxiliar para GitFlow
+[Utilizando o fluxo Git Flow](https://medium.com/trainingcenter/utilizando-o-fluxo-git-flow-e63d5e0d5e04)
+[Gerenciando seus branches com o Git Flow](https://tableless.com.br/git-flow-introducao/)
+
 ### Commits
 
 1. Limitar o título do commit a 50 caracteres
