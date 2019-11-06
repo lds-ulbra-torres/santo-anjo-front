@@ -1,10 +1,15 @@
 import React from 'react';
-import Logo from './assets/Logo.svg'
+import { LoginView } from './modules'
 
 const App = () => (
-  <>
-    <img src={Logo} />
-  </>
+  <div style={styles.container}>
+    <LoginView />
+  </div>
 );
 
+const styles = {
+  container: {
+    fontFamily: 'Roboto',
+  }
+}
 export default App;
