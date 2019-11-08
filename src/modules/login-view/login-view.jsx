@@ -3,24 +3,55 @@ import styled from 'styled-components'
 import { Button, Input } from '@material-ui/core'
 import Logo from '../../assets/Logo.svg'
 
+
 export class LoginView extends Component {
+
     render() {
 
         return (
-            <Title>
-                UHAUDHSU
-                {/* <img src={Logo} />
-                <h1>Sistema de Água Santo Anjo da Guarda</h1>
-                <Input></Input>
-                <Input></Input>
-                <Button>Entrar</Button> */}
-            </Title>
+            <Container>
+                <Image><img src={Logo} /></Image>
+                <Header>Sistema de Água Santo Anjo da Guarda</Header>
+                <InputBox>
+                    <Input placeholder='Login' />
+                    <Input placeholder='Senha' />
+                    <Button>Entrar</Button>
+                </InputBox>
+            </Container>
         );
     };
 };
 
-const Title = styled.h1`
-  font-size: 1.5em;
-  text-align: center;
-  color: palevioletred;
+const Container = styled.div`
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+`;
+
+const Image = styled.span`
+    
+`;
+
+
+const Header = styled.h4`
+    
+`;
+
+const InputBox = styled.div`
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border: 1px solid black;
+    height: 200px;
+    width: 400px;
+    padding: 40px;
+`;
+
+const Column = styled.div`
+    display: flex;
+    flex-direction: column;
+`;
+
+const input = styled.div`
+    /* Perguntar sobre sobrepor componentes do material-ui */
 `;
