@@ -1,10 +1,12 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
-import { Input, TextField } from '@material-ui/core';
+import { TextField } from '@material-ui/core';
 
 const useStyles = makeStyles({
     input: {
-        width: '400px'
+        width: '400px',
+        marginTop: '20px',
+        marginBottom: '20px'
     }
 });
 
@@ -19,7 +21,7 @@ export const CustomInput = ({ value }) => {
             type='text'
             variant='outlined'
             InputLabelProps={{
-                shrink: true,
+                shrink: true
             }}
         />
     );

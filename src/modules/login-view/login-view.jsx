@@ -1,55 +1,29 @@
-import React, { Component } from 'react';
-import styled from 'styled-components'
-import { Button, Input } from '@material-ui/core'
-import Logo from '../../assets/Logo.svg';
+import React from 'react';
+import { makeStyles } from '@material-ui/core/styles';
+import { CustomButton, CustomInput } from '../../components';
+// import Logo from '../../assets/Logo.svg';
+
+const useStyles = makeStyles({
+    container: {
+        display: 'flex',
+        flexDirection: 'column',
+        alignItems: 'center',
+        padding: '20px'
+    }
+});
 
 
 export const LoginView = () => {
 
+    const classes = useStyles();
+
     return (
-        <Container>
-            <Image><img src={Logo} alt='Logotipo' /></Image>
-            <Header>Sistema de Água Santo Anjo da Guarda</Header>
-            <InputBox>
-                <Input placeholder='Login' />
-                <Input placeholder='Senha' />
-                <Button>Entrar</Button>
-            </InputBox>
-        </Container>
+
+        <div className={classes.container}>
+            <CustomInput value='Login' />
+            <CustomInput value='Senha' />
+            <CustomButton value='Entrar' />
+        </div>
+
     )
 };
-
-const Container = styled.div`
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    font-family: 'Roboto';
-`;
-
-const Image = styled.span`
-    width: 10
-`;
-
-
-const Header = styled.h4`
-    
-`;
-
-const InputBox = styled.div`
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    border: 1px solid black;
-    height: 200px;
-    width: 400px;
-    padding: 40px;
-`;
-
-const Column = styled.div`
-    display: flex;
-    flex-direction: column;
-`;
-
-const input = styled.div`
-    /* Perguntar sobre sobrepor componentes do material-ui */
-`;
