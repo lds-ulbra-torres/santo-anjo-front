@@ -1,7 +1,8 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import { CustomButton, CustomInput } from '../../components';
-// import Logo from '../../assets/Logo.svg';
+import { LoginBox } from './components'
+import Logo from '../../assets/Logo.svg';
 
 const useStyles = makeStyles({
     container: {
@@ -18,12 +19,15 @@ export const LoginView = () => {
     const classes = useStyles();
 
     return (
-
         <div className={classes.container}>
-            <CustomInput value='Login' />
-            <CustomInput value='Senha' />
-            <CustomButton value='Entrar' />
-        </div>
+            <img src={Logo} alt='Logo' />
+            <h4>Sistema de Água Santo Anjo da Guarda</h4>
 
+            <LoginBox>
+                <CustomInput value='Login' />
+                <CustomInput value='Senha' />
+                <CustomButton value='Entrar' />
+            </LoginBox>
+        </div>
     )
 };
