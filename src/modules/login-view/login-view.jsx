@@ -1,35 +1,33 @@
 import React, { Component } from 'react';
 import styled from 'styled-components'
 import { Button, Input } from '@material-ui/core'
-import Logo from '../../assets/Logo.svg'
+import Logo from '../../assets/Logo.svg';
 
 
-export class LoginView extends Component {
+export const LoginView = () => {
 
-    render() {
-
-        return (
-            <Container>
-                <Image><img src={Logo} /></Image>
-                <Header>Sistema de Água Santo Anjo da Guarda</Header>
-                <InputBox>
-                    <Input placeholder='Login' />
-                    <Input placeholder='Senha' />
-                    <Button>Entrar</Button>
-                </InputBox>
-            </Container>
-        );
-    };
+    return (
+        <Container>
+            <Image><img src={Logo} alt='Logotipo' /></Image>
+            <Header>Sistema de Água Santo Anjo da Guarda</Header>
+            <InputBox>
+                <Input placeholder='Login' />
+                <Input placeholder='Senha' />
+                <Button>Entrar</Button>
+            </InputBox>
+        </Container>
+    )
 };
 
 const Container = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
+    font-family: 'Roboto';
 `;
 
 const Image = styled.span`
-    
+    width: 10
 `;
 
 

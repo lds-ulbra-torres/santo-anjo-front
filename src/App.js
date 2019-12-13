@@ -1,15 +1,13 @@
 import React from 'react';
-import { LoginView } from './modules'
+import { CustomInput } from './components';
+// import { LoginView } from './modules';
 
 const App = () => (
-  <div style={styles.container}>
-    <LoginView />
-  </div>
+  <>
+    <CustomInput value='Login' />
+
+  </>
 );
 
-const styles = {
-  container: {
-    fontFamily: 'Roboto',
-  }
-}
+
 export default App;
